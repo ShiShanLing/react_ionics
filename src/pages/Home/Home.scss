@@ -1,0 +1,188 @@
+
+//假设屏幕宽度 375
+//创建一个函数专门用来计算屏幕宽度
+
+
+.container{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+
+    :global {
+        ::-webkit-scrollbar {
+          width: 5px;
+          height: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: rgba(0,0,0,0.1);
+          border-radius: 10px;
+        }
+        ::-webkit-scrollbar-track {
+          border-radius: 10px;
+        }
+      }
+
+}
+
+ion-col {
+    background-color: #135d54;
+    border: solid 1px #fff;
+    color: #fff;
+    width: 3rem;
+    text-align: center;
+  }
+
+.nav-bar-title{
+    text-align: center;
+    font-size: 18px;
+}
+//轮播图
+.ad-swiper{
+    width: 100%;
+    // height: 250px;
+    .swiper-slide{
+        
+        .subTitle{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 25px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            line-height: 25px;
+            font-size: 15px;
+        }
+    }
+}
+
+.application-swiper{
+    width: 100%;
+    // height: 125px;
+    .application-item{
+        padding: 1px;
+        
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .icon{
+            margin-top: 10px;
+            width: 30px;
+            height: 30px;
+            color: rgb(44, 102, 255);
+
+        }
+        .title{
+            margin-top: 5px;
+            font-size: 16px;
+        }
+    }
+
+    
+
+}
+
+//应用滑动指示器
+.application-sliding-indication-box{
+    margin-top: 10px;
+    width: 100%;
+    // background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .indication-box{
+        width: 20%;
+        height: 6px;
+        border-radius: 3px;
+        background-color: rgb(128, 128, 128, 0.4);
+        .indication-bar{
+            width: 50%;
+            height: 6px;
+            background-color: green;
+            border-radius: 3px;
+        }
+    }
+
+    
+
+}
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+    margin-bottom: 18px;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    background-color: rgb(35, 255, 39);
+    margin-bottom: 50px;
+    //blue
+}
+
+
+.goods-list-box{
+    width: 100%;
+    padding: 5px;
+
+    .goods-item{
+        width: 50%;
+        
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .goods-image{
+            width: 80%;
+        }
+        .goods-name{
+            margin-top: 3px;
+            width: 100%;
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: center;
+        }
+        .goods-des{
+            margin-top: 3px;
+            text-align: center;
+            width: 100%;
+            font-size: 13px;
+            color: gray;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .price-box{
+            margin-top: 3px;
+            width: 100%;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            .goods-price{
+                width: 50%;
+                font-size: 16px;
+                color: red;
+                text-align: right;
+                margin-right: 5px;
+            }
+            .price-des{
+                font-size: 12px;
+                color: gray;
+                
+            }
+        }
+
+
+        //价钱和价钱说明
+        // .goods-price{
+        //     width: 100%;
+        //     font-size: 18px;
+        //     color: red;
+        //     text-align: center;
+        // }
+    }
+}
+
+

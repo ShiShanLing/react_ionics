@@ -1,0 +1,76 @@
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  :global {
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      border-radius: 10px;
+    }
+  }
+
+  .card{
+    padding-bottom: 13px;
+  
+  }
+  .content{
+    margin-bottom: 0px;
+  }
+  //
+  .card-content-md{
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .space-flex{
+      flex: 1;
+    }
+  }
+  
+  
+  
+  .check-box{
+    opacity: 1;
+    pointer-events:none;
+  }
+  .check-hide{
+    display: none;
+  }
+  //
+  .iconfont {
+    font-size: 20px;
+    margin-left: 5px;
+  }
+
+  .pay-type-name {
+    margin-left: 10px;
+    font-size: 16px;
+  }
+
+  .pay-now-box{
+    // background-color: yellow;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .pay-now{
+      width: 70%;
+      margin-left: 40px;
+      margin-right: 40px;
+      height: 50px;
+    }
+  }
+}
+
+
+

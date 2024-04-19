@@ -1,0 +1,24 @@
+.content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-box{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+
+    .cancel{
+        
+    }
+    .space{
+        flex: 1;
+    }
+    .confirm{
+        
+    }
+}
+

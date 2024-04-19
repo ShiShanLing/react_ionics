@@ -1,0 +1,226 @@
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  :global {
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      border-radius: 10px;
+    }
+  }
+
+}
+
+
+
+
+.content-box {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .item-box {
+    width: 100%;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    border: 1px solid gray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    //*号需要单独处理居中问题
+    .required-symbol {
+      margin-left: 20px;
+      font-size: 16px;
+      line-height: 20px;
+      width: 16px;
+      height: 14px;
+      // background-color: red;
+      color: rgb(13, 12, 12);
+    }
+
+
+    .text-input {
+      margin-left: 5px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-right: 10px;
+    }
+
+    //自定义一个假的输入框
+    .fake-input {}
+
+    .input-disabled {
+      pointer-events: none;
+
+    }
+
+
+    /*
+    有的时候需要输入框的样式,并且想点击输入框触发点击, 但又不想响应输入的输入事件,
+    这时需要定义一个div盖在输入框上方,响应这个div的点击实现自己.
+    暂时无解,absolute 上层的元素点击事件一定会传递给下层的输入框.只能自定义输入框.
+    */
+    .input-coating {
+      position: absolute;
+      left: 41px;
+      top: 10px;
+      right: 10px;
+      bottom: 10px;
+      // background-color: yellow;
+
+    }
+
+    .title {
+      margin-left: 5px;
+      color: rgb(13, 12, 12);
+      font-size: 13px;
+    }
+
+    .content-text {
+      height: 44px;
+      color: var(--placeholder-color);
+      ;
+      line-height: 44px;
+      margin: 10px 10px 10px 16px;
+
+    }
+
+    .text-default {
+      color: #666666;
+      ;
+      margin-left: 16px;
+
+    }
+
+    .flex-1 {
+      flex: 1;
+    }
+
+    //生日选择
+    .birthday-text {}
+
+
+    //设置为收货地址开关
+
+    .setDefaultShippingAddress {
+      margin: 10px 20px 20px 40px;
+    }
+
+
+    //男女选择器
+    .gender-radio {
+      margin: 10px 20px 10px 6px;
+
+      .item {
+        margin-left: 20px;
+        // margin-right: 0px;
+
+        // margin-inline:0px
+      }
+    }
+
+    //婚姻状态选择
+    .marital-status-item {
+      background-color: white;
+      width: 70px;
+      border-radius: 0;
+      height: 44px;
+      // box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      margin-bottom: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 44px;
+      color: black;
+    }
+
+
+    //收货地址
+    //省市县 这个盒子需要row可点击
+    .address-row {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+    }
+
+
+
+    .other-services-box {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      
+      //标题
+      .title{
+        font-size: 16px;
+        margin-left: 10px;
+        margin-top: 10px;
+
+      }
+      //其他附加服务选择
+      .other-services {
+        padding: 10px 10px 0 10px;
+        width: 100%;
+        display: grid;
+        grid-row: auto;
+
+        .item {
+          margin-right: 10px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+
+
+    //地址详情,区-街道-门牌号
+    .address-detaill {
+      width: 100%;
+      height: 44px;
+
+
+    }
+
+  }
+
+  //收货地址的盒子
+  .address-box {
+    flex-direction: column;
+  }
+
+
+
+
+
+}
+
+.block {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.go-back {}

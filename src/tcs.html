@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>贪吃蛇游戏</title>
+<style>
+    #game-board {
+        display: grid;
+        grid-template-columns: repeat(20, 20px);
+        grid-template-rows: repeat(20, 20px);
+        gap: 1px;
+        background-color: #777;
+    }
+    .snake, .food {
+        width: 20px;
+        height: 20px;
+    }
+    .snake {
+        background-color: green;
+    }
+    .food {
+        background-color: red;
+    }
+</style>
+</head>
+<body>
+<div id="game-board"></div>
+<script>
+const board = document.getElementById('game-board');
+let snake = [{x: 10, y: 10}];
+let food = {x: 5, y: 5};
+
+function render() {
+    board.innerHTML = '';
+    snake.forEach(segment => {
+        const snakeElement = document.createElement('div');
+        snakeElement.classList.add('snake');
+        snakeElement.style.gridColumn = segment.x + 1;
+        snakeElement.style.gridRow = segment.y + 1;
+        board.appendChild(snakeElement);
+    });
+
+    const foodElement = document.createElement('div');
+    foodElement.classList.add('food');
+    foodElement.style.gridColumn = food.x + 1;
+    foodElement.style.gridRow = food.y + 1;
+    board.appendChild(foodElement);
+}
+
+render();
+</script>
+</body>
+</html>
