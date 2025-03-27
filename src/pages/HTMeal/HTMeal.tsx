@@ -42,12 +42,7 @@ const HTMeal: React.FC = () => {
                     <IonButton onClick={() => {
                             openWebView(0);
                         }}>
-                            开始订餐
-                        </IonButton>
-                        <IonButton onClick={() => {
-                            openWebView(1);
-                        }}>
-                            我的历史订单
+                            查看二维码
                         </IonButton>
                     </div>
              

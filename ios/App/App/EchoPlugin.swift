@@ -30,7 +30,7 @@ public class EchoPlugin: CAPPlugin {
                  https://wxm-dev.igskapp.com/MealH5/P/Food/ChoosePreApproval?UserId=sss31597
                  https://wxm-dev.igskapp.com/MealH5/P/Order/Index1?UserId=sss31597
                  */
-                let tempURL = "https://wxm-dev.igskapp.com/MealH5/P/Food/ChoosePreApprovalForCRM?UserId=sss31597"
+                let tempURL = "http://47.110.143.183:8080/v0426/test/#/ht/hcp/signin/qrcode?uniqueCode=HT-FQ816D81"
                 wkWebView.urlStr = tempURL;
             
                 wkWebView.modalPresentationStyle = .fullScreen

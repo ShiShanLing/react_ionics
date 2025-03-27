@@ -26,7 +26,7 @@ class WKWebViewController: UIViewController,WKNavigationDelegate, WKUIDelegate {
         customNavBar.backgroundColor = UIColor(red: 0, green: 0, blue: 1, alpha: 0.6)
         
         let titleLabel = UILabel()
-        titleLabel.text = "HT-Meal"
+        titleLabel.text = "HCP"
         titleLabel.textColor = UIColor.white
         titleLabel.frame = CGRect(x: 0, y: 15, width: ContentView.frame.width, height: 44)
         titleLabel.textAlignment = .center
@@ -82,18 +82,14 @@ class WKWebViewController: UIViewController,WKNavigationDelegate, WKUIDelegate {
         // 添加观察者以监测 canGoBack 属性的变化
         wkWebview.addObserver(self, forKeyPath: #keyPath(WKWebView.canGoBack), options: .new, context: nil)
         self.view.backgroundColor = UIColor(red: 229, green: 229, blue: 229, alpha: 1);
-        self.wkWebview.frame = CGRect(x: view.frame.width/3, y: 64, width: view.frame.width/3, height: view.frame.height - 64)
-     
+        self.wkWebview.frame = CGRect(x: 0, y: 64, width: view.frame.width, height: view.frame.height - 64)
         // Do any additional setup after loading the view.
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
         
-  
+        
     }
-    
-    
     //返回上一页面
     @objc func goBaclButtonClick(){
         wkWebview.goBack();
